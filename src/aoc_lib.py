@@ -8,7 +8,7 @@ class Solution:
     def __init__(self) -> None:
         self.input_data = ""
 
-    def set_data(self, data_path: Path):
+    def set_data(self, data_path: Path): 
         with data_path.open() as fh:
             self.input_data = fh.read()
 
