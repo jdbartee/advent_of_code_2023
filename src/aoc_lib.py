@@ -28,9 +28,11 @@ class Solution:
         this = cls()
         this.set_data(args.data_file)
         print("Part 1:")
-        print(this.part_one())
+        part_1 = ColoredString(str(this.part_one()), TerminalColor.GREEN)
+        print(part_1)
         print("Part 2")
-        print(this.part_two())
+        part_2 = ColoredString(str(this.part_two()), TerminalColor.GREEN)
+        print(part_2)
 
 class TerminalColor():
     BLACK = '\033[30m'
