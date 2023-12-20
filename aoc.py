@@ -15,6 +15,7 @@ from src.day_fourteen import DayFourteen
 from src.day_fifteen import DayFifteen
 from src.day_sixteen import DaySixteen
 from src.day_seventeen import DaySeventeen
+from src.day_eighteen import DayEighteen
 
 from argparse import ArgumentParser
 
@@ -23,7 +24,7 @@ if __name__ == "__main__":
     subparsers = parser.add_subparsers(title='title', required=True, help='help')
     for day in [DayOne, DayTwo, DayThree, DayFour, DayFive, DaySix, DaySeven, DayEight,
                 DayNine, DayTen, DayEleven, DayTwelve, DayThirteen, DayFourteen, DayFifteen,
-                DaySixteen,DaySeventeen,]:
+                DaySixteen,DaySeventeen,DayEighteen]:
         subparser = subparsers.add_parser(day.command_name)
         day.setup_parser(subparser)
         subparser.set_defaults(run=day.run)
